@@ -3,10 +3,9 @@ import FullBackground from "../FullBackground";
 import PhotoLeft from "../PhotoLeft";
 import PhotoRight from "../PhotoRight";
 import NoPhoto from "../NoPhoto";
-import AnimatedWrapper from "../AnimatedWrapper";
 import "./Slide.css";
 
-class SlideComponent extends Component {
+class Slide extends Component {
   render() {
     return (
       <div className="page">
@@ -27,5 +26,4 @@ class SlideComponent extends Component {
   }
 }
 
-const Slide = AnimatedWrapper(SlideComponent);
 export default Slide;
