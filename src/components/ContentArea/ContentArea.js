@@ -1,5 +1,5 @@
 import React from "react";
-import { Header, Icon } from "semantic-ui-react";
+import { Header, Icon, Segment } from "semantic-ui-react";
 const ContentArea = props => {
   return (
     <div>
@@ -22,13 +22,13 @@ const ContentArea = props => {
         </ul>
       ) : null}
       {props.code ? (
-        <div inverted>
+        <Segment inverted>
           {props.code.map(item => (
             <p>
               <code className="full">{JSON.stringify(item)}</code>
             </p>
           ))}
-        </div>
+        </Segment>
       ) : null}
       {props.link ? (
         <a className="full" href={props.link.url}>
