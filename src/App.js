@@ -17,6 +17,10 @@ class App extends Component {
               subtitle={slide.subtitle}
               icon={slide.icon}
               layout={slide.layout}
+              text={slide.tekst}
+              link={slide.link}
+              list={slide.list}
+              code={slide.code}
             />
           </Route>
         ))}

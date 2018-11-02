@@ -28,10 +28,29 @@
 .white {
   color: white !important;
 }
+.sub.header {
+  font-size: 1.8rem !important;
+  margin-top: 1rem !important;
+}
 .full {
   padding: 1rem !important;
   width: 100%;
 }
 .text-left {
   text-align: left !important;
+}
+i.icon {
+  margin: auto;
+  width: 100%;
+}
+p {
+  font-size: 1.2rem;
+}
+ul.full {
+  padding: 20px !important;
+}
+ul.full > li {
+  margin-left: 20px;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
 }

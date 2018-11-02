@@ -1,22 +1,15 @@
 import React, { Component } from "react";
-import { Grid, Header, Icon } from "semantic-ui-react";
+import { Grid } from "semantic-ui-react";
+import ContentArea from "../ContentArea";
 import "./PhotoRight.css";
 
 class PhotoRight extends Component {
   render() {
-    const { background, title, subtitle, icon } = this.props;
+    const { background } = this.props;
     return (
       <Grid columns="equal">
         <Grid.Column width={8} verticalAlign="middle">
-          <Header
-            size="huge"
-            className="header full text-left"
-            icon
-            content={title}
-            subheader={subtitle}
-          >
-            {icon ? <Icon name={icon} /> : null}
-          </Header>
+          <ContentArea {...this.props} />
         </Grid.Column>
         <Grid.Column
           width={8}
