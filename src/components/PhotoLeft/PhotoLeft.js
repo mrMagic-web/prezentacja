@@ -13,12 +13,14 @@ class PhotoLeft extends Component {
           style={{ backgroundImage: `url(./image/${background})` }}
         />
         <Grid.Column width={8} verticalAlign="middle">
-          <Header size="huge" className="header-text" icon>
+          <Header
+            size="huge"
+            className="header full text-left"
+            icon
+            content={title}
+            subheader={subtitle}
+          >
             {icon ? <Icon name={icon} /> : null}
-            {title}
-            <Header.Subheader className="subheader" as="h2">
-              {subtitle}
-            </Header.Subheader>
           </Header>
         </Grid.Column>
       </Grid>
