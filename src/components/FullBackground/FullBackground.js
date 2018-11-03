@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "./FullBackground.css";
-import { Grid, Header, Icon } from "semantic-ui-react";
-
+import { Grid } from "semantic-ui-react";
+import ContentArea from "../ContentArea";
 class FullBackground extends Component {
   render() {
-    const { background, title, subtitle, icon } = this.props;
+    const { background } = this.props;
     return (
       <div>
         <Grid.Column className="full-background">
@@ -12,13 +12,7 @@ class FullBackground extends Component {
             className="background"
             style={{ backgroundImage: `url(./image/${background})` }}
           />
-          <Header size="huge" className="header-text" icon>
-            {icon ? <Icon name={icon} /> : null}
-            {title}
-            <Header.Subheader className="subheader" as="h2">
-              {subtitle}
-            </Header.Subheader>
-          </Header>
+          <ContentArea {...this.props} />
         </Grid.Column>
       </div>
     );

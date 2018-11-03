@@ -7,12 +7,12 @@ const ContentArea = props => {
         <Icon name={props.icon} className="props.icon" size="huge" />
       ) : null}
       <Header
-        textAlign="left"
+        textAlign="center"
         size="huge"
         className="header full"
         content={props.title}
-        subheader={props.subtitle}
       />
+      <h2 className="subheader">{props.subtitle}</h2>
       {props.text ? <p className="full">{props.text}</p> : null}
       {props.list ? (
         <ul className="full">
@@ -24,9 +24,10 @@ const ContentArea = props => {
       {props.code ? (
         <Segment inverted>
           {props.code.map(item => (
-            <p>
-              <code className="full">{JSON.stringify(item)}</code>
-            </p>
+            <code className="full">
+              {item}
+              <br />
+            </code>
           ))}
         </Segment>
       ) : null}

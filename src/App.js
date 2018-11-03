@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div className="App">
         {slides.map((slide, i) => (
-          <Route exact path={`/${i}`}>
+          <Route exact path={`/${i}`} key={`slide-${i}`}>
             <Slide
               key={slide.title}
               title={slide.title}
@@ -17,7 +17,7 @@ class App extends Component {
               subtitle={slide.subtitle}
               icon={slide.icon}
               layout={slide.layout}
-              text={slide.tekst}
+              text={slide.text}
               link={slide.link}
               list={slide.list}
               code={slide.code}
