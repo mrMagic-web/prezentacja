@@ -89,3 +89,9 @@ ul.full > li {
 .page {
   border-top: 1px solid lightblue;
 }
+.commented-code span {
+  color: yellow;
+  font-family: cursive;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

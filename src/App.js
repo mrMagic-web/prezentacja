@@ -11,6 +11,7 @@ class App extends Component {
         {slides.map((slide, i) => (
           <Route exact path={`/${i}`} key={`slide-${i}`}>
             <Slide
+              slideNumber={i}
               key={slide.title}
               title={slide.title}
               background={slide.background}
@@ -21,6 +22,7 @@ class App extends Component {
               link={slide.link}
               list={slide.list}
               code={slide.code}
+              commentedcode={slide.commentedcode}
             />
           </Route>
         ))}

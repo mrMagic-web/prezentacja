@@ -65,9 +65,9 @@ const slides = [
     layout: "photo-left"
   },
   {
-    title: "Stosowanie styli",
+    title: "Podstawowe selektory",
     subtitle:
-      "Styl możemy dołączyć na 4 sposoby. Możemy stylować sam tag, nadać tagowi id(musi być unikalne), dodać atrybut style(nooooo), lub nadać klasę(uuu yeah).",
+      "Styl możemy dołączyć na kilka sposobów. Możemy stylować sam tag, nadać tagowi id(musi być unikalne i nie powinno być używane do stylowania), nadać klasę lub dodać atrybut style(nooooo).",
     code: [
       `<div id="nawigacja" class="nawigacja" style="color: red;">Jakiśtam tekst</div>`
     ],
@@ -77,17 +77,34 @@ const slides = [
   {
     title: "Specificity",
     subtitle: "Co jest ważniejsze, a co jest mniej ważniejsze",
-    list: [
-      "* - zaznacz wszysko 0 0 0 0 0",
-      "div, p, li - znacznik 0 0 0 0 1",
-      ".klasa 0 0 0 1 0",
-      ".klasa>p - łączenie klasy i znacznika 0 0 0 1 1",
-      "#id  0 0 1 0 0",
-      'style="font-size: 10" 0 1 0 0 0',
-      "!important 1 0 0 0 0"
+    commentedcode: [
+      { comment: "0 0 0 0 0 - najmniej ważne", code: "* - zaznacz wszysko" },
+      {
+        comment: "0 0 0 0 1 - sprecyzowanie tagu ma wyższe znaczenie",
+        code: "div, p, li"
+      },
+      { comment: "0 0 0 1 0 - nadanie klasy elementowi ", code: ".klasa" },
+      {
+        comment: '0 0 0 1 1 - klasa z z konkretnym tagiem <p class="klasa">',
+        code: ".klasa p"
+      },
+      {
+        comment: "0 0 1 0 0 - możemy miec tylko elementy z unikalnym id",
+        code: "#id"
+      },
+      {
+        comment:
+          "0 1 0 0 0 - style ma wysokie znaczenie ale nie zalecane jest stosowanie",
+        code: 'style="font-size: 10"'
+      },
+      {
+        comment:
+          "1 0 0 0 0 - używamy !important jak nic innego nie działa. Unikaj jak ognia.",
+        code: "!important"
+      }
     ],
     background: "specificity.png",
-    layout: "photo-right"
+    layout: "no-photo"
   },
   {
     title: "Zadanie",
@@ -99,6 +116,44 @@ const slides = [
       text: "w3schools.com/css",
       url: "https://www.w3schools.com/css"
     }
+  },
+  {
+    title: "Layout - Układ strony",
+    subtitle:
+      "Jedną z najważniejszych funkcji CSS-a to precyzowanie układu strony. Dzięki kilku ciekawym funkciom możemy umieści sekcje strony w odpowiednich miejscach. Mamy tu do wyboru, float, flexbox i css grid.",
+    background: "grid-2.jpg",
+    layout: "photo-left",
+    link: {
+      text: "w3schools.com/css",
+      url: "https://www.w3schools.com/css"
+    }
+  },
+  {
+    title: "Box Model",
+    subtitle: "Model pudełkowy CSS",
+    background: "css-box-model.png",
+    commentedcode: [
+      {
+        comment:
+          "Elementom HTML możemy nadawać wysokość i szerokość za pomocą właściwości height oraz width.",
+        code: "width: 300px; height: 200px;"
+      },
+      {
+        comment: "Wypełnienie (padding), Dodaję do elmementu wypełnienie",
+        code: "padding: 20px;"
+      },
+      {
+        comment:
+          "Obramowanie (border) - możemy nadawać naszym elementom ramki o różnych stylach.",
+        code: "border: 2px dotted red;"
+      },
+      {
+        comment:
+          "Margines (margin) - Margines jest to odległość między krawędzią (ramką) elementu a innym, sąsiadującym elementem. ",
+        code: "margin: 15px; margin-right: 4px;"
+      }
+    ],
+    layout: "photo-left"
   }
 ];
 export default slides;
