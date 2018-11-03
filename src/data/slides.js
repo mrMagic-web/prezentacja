@@ -109,7 +109,7 @@ const slides = [
   {
     title: "Zadanie",
     subtitle:
-      "Do naszej strony z poprzedniego tygodnia podpinamy plik style.css. Dajemy padding: 0, i margin: 0 wszystkim elementom. Ustalamy rozmiar paragrafu 1.1rem i wszystkim tytułom(h1 do h6) dajemy kolor ciemny-szary, i czcionkę Verdana. Wszystkie tytuły h1 wycentruj, zamień na wielkie litery i podkreśl. Wszystkim naszym sekcjom dodajemy unikalne id.",
+      "Do naszych stron z poprzedniego tygodnia podpinamy plik style.css. Dajemy padding: 0, i margin: 0 wszystkim elementom. Ustalamy rozmiar paragrafu 1.1rem i wszystkim tytułom(h1 do h6) dajemy kolor ciemny-szary, i czcionkę Verdana. Wszystkie tytuły h1 wycentruj, zamień na wielkie litery i podkreśl. Wszystkim naszym sekcjom dodajemy unikalne id.",
     background: "question-1.jpg",
     layout: "photo-full",
     link: {
@@ -154,6 +154,57 @@ const slides = [
       }
     ],
     layout: "photo-left"
+  },
+  {
+    title: "Budowanie układu strony",
+    subtitle: "Flexbox vs CSS Grid",
+    background: "bootstap-1.jpg",
+    link: {
+      text: "github.com/mrMagic-web/kurs-frontendu",
+      url: "https://github.com/mrMagic-web/kurs-frontendu"
+    },
+    layout: "photo-right"
+  },
+  {
+    title: "Zadanie",
+    subtitle:
+      "Twoja strona index z zeszłego tygodnia miała header i footer. Jesli jeszcze nie ma to podziel środkową częśc na część głowną i część boczną(asside). Użyj flexboxa lub CSS grid żeby odpowiednio podzielić swoją stronę.",
+    background: "question-1.jpg",
+    layout: "photo-full",
+    link: {
+      text: "w3schools.com/css",
+      url: "https://www.w3schools.com/css"
+    }
+  },
+  {
+    title: "RWD",
+    subtitle: "Responsive Web Design",
+    text:
+      "Technika projektowania strony www, tak aby jej wygląd i układ dostosowywał się automatycznie do rozmiaru okna przeglądarki, na której jest wyświetlany np. przeglądarki, smartfonów czy tabletów.",
+    code: [
+      "@media only screen and (min-width: 600px) {",
+      "div.example { font-size: 50px; }",
+      `}`,
+      "",
+      `@media only screen and (max-width: 601px) {`,
+      "div.example { font-size: 80px; }",
+      `}`,
+      "",
+      "@media only screen and (orientation: landscape) {}"
+    ],
+    background: "example-rwd.jpg",
+    layout: "photo-left"
+  },
+  {
+    title: "Zadanie",
+    subtitle:
+      "Popraw swoją stronę tak aby wyświetlała się lepiej na mniejszych ekranach(mobile). Teksty mają być mniejsze a sejcja asside powinna iść pod sekcję głowną.",
+    background: "question-1.jpg",
+    layout: "photo-full",
+    link: {
+      text: "w3schools.com/css/css_rwd_intro",
+      url: "https://www.w3schools.com/css/css_rwd_intro.asp"
+    }
   }
 ];
 export default slides;
