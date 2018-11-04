@@ -325,11 +325,32 @@ const slides = [
     background: "grid1.jpg",
     layout: "photo-right"
   },
-
   {
     title: "Zadanie",
     subtitle:
       "Popraw swoją stronę tak aby wyświetlała się lepiej na mniejszych ekranach(mobile). Teksty mają być mniejsze a sejcja asside powinna iść pod sekcję głowną.",
+    background: "question-1.jpg",
+    layout: "photo-full",
+    link: {
+      text: "w3schools.com/css/css_rwd_intro",
+      url: "https://www.w3schools.com/css/css_rwd_intro.asp"
+    }
+  },
+  {
+    title: "Bootstrap",
+    text:
+      "Bootstrap jest jedną z najpopularniejszych bibliotek CSS. Jest zbiorem snippetów HTML, klas CSS oraz skryptów JS pozwalającym na szybkie budowanie stron RWD. Dzięki siatce(grid) możemy stworzyć szkielet naszej witryny a do tego użyć różnych gotowych elementów intenetowych.",
+    background: "bootstrap-3.jpg",
+    layout: "photo-left",
+    link: {
+      text: "getbootstrap.com",
+      url: "https://getbootstrap.com/"
+    }
+  },
+  {
+    title: "Homework",
+    subtitle:
+      "Używając na swojej stronie dodaj Bootstrap 4. Popraw swoją nawigację aby używała responsywnego elementu Bootstrap navbar, który będzie na stałe przytwierdzony do górnej części strony. Na nowej sekcji(100 lecie Polski) budujesz tam karuzelę ze zdjęciami i opisem ulubionych polskich postaci ostatnich stu lat. Zbudujesz infografikę, która będzie użwać ikon, kolorów i ciekawego układu. Użyjesz 4 innych elementów, które uczynią Twoją stronę piękną.",
     background: "question-1.jpg",
     layout: "photo-full",
     link: {
