@@ -75,6 +75,98 @@ const slides = [
     layout: "photo-right"
   },
   {
+    title: "Głóne właściwości tekstu",
+    commentedcode: [
+      { comment: "Rozmiar tekstu", code: "font-size: 16px;" },
+      { comment: "Kolor tekstu", code: "color: blue;" },
+      {
+        comment: "Podkreślenie, przekreślenie",
+        code: "text-decoration: overline / underline / line-through;"
+      },
+      {
+        comment: "Zmiana wielkości tekstu",
+        code: "text-transform: uppercase / lowercase / capitalize"
+      },
+      { comment: "Odległośc między literami", code: "letter-spacing: 3px;" },
+      { comment: "Wysokość linii", code: "line-height: 1.2rem" },
+      {
+        comment: "Odwrocenie tekstu, w przypadku pisma arabskiego",
+        code: " direction: rtl;"
+      }
+    ]
+  },
+  {
+    title: "Tło strony lub elementu",
+    commentedcode: [
+      { comment: "Kolor tła", code: "background-color: lightblue;" },
+      {
+        comment: "Zdjęcie jako tło",
+        code: "background-image: url('paper.gif');"
+      },
+      {
+        comment: "Powtarzanie tła, w przypadku zdjęcia",
+        code: "background-repeat: repeat-x / repeat-y / no-repeat"
+      },
+      {
+        comment: "Pozycja tła",
+        code: "background-position: right top;"
+      },
+      {
+        comment: "Rozmiar tła",
+        code: "background-size: 300px 100px / 30% / auto / cover / contain;"
+      }
+    ]
+  },
+  {
+    title: "Pseudoklasy",
+    commentedcode: [
+      {
+        comment: "Stosujemy wpisując: po selektorze",
+        code: "selector:pseudo-class {property:value;}"
+      },
+      {
+        comment: "Właściwości linku, nie odwiedzonego i odwiedzonego",
+        code:
+          "a:link { color: #FF0000; font-size: 14px;} a:visited { color: #00FF00; }"
+      },
+      {
+        comment: "Właściwości po najechaniu, zaznaczonego link",
+        code: "a:hover { color: #FF00FF;} a:active {color: #0000FF;}"
+      },
+      {
+        comment: "Pierwsze dziecko elementu, kolejny element tego typu",
+        code: "p:first-child {color: blue;}, p:nth-of-type(2)"
+      },
+      {
+        comment: "Negacja",
+        code: ":not(p) {background: #ff0000;}"
+      }
+    ]
+  },
+  {
+    title: "Pseudoelementy",
+    commentedcode: [
+      {
+        comment: "Stosujemy wpisując :: po selektorze",
+        code: "p::first-line { color: #ff0000; font-variant: small-caps;}"
+      },
+      {
+        comment: "Pierwsza linia tekstu",
+        code: "p::first-line { color: #ff0000; font-variant: small-caps;}"
+      },
+      {
+        comment: "Pierwsza literaście",
+        code: "p::first-letter { color: #ff0000; font-size: xx-large;}"
+      },
+      {
+        comment:
+          "Before - przed, After - po - tworzsymy miejsce w przestrzeni elementu",
+        code:
+          "h1::before { content: url(smiley.gif);} h1::after { content: ''; width: 200px; height: 150px; position: absolute}"
+      }
+    ]
+  },
+  {
     title: "Specificity",
     subtitle: "Co jest ważniejsze, a co jest mniej ważniejsze",
     commentedcode: [
@@ -157,11 +249,33 @@ const slides = [
   },
   {
     title: "Budowanie układu strony",
-    subtitle: "Flexbox vs CSS Grid",
+    subtitle: "Flexbox vs CSS Grid vs inne",
+    text:
+      "Ściągamy kod z poniższego repozytorium. W katalogu layout mamy ciekawy przykład układu",
     background: "bootstap-1.jpg",
     link: {
       text: "github.com/mrMagic-web/kurs-frontendu",
       url: "https://github.com/mrMagic-web/kurs-frontendu"
+    },
+    layout: "photo-right"
+  },
+  {
+    title: "Flexboxa Froggy",
+    subtitle: "Flexbox to gra, ktróa pomaga w opanowaniu Flexboxa. ",
+    background: "froggy.png",
+    link: {
+      text: "flexboxfroggy.com/#pl",
+      url: "https://flexboxfroggy.com/#pl"
+    },
+    layout: "photo-left"
+  },
+  {
+    title: "Gridgarden",
+    subtitle: "Kolejna super fajna gra",
+    background: "gridgarden.png",
+    link: {
+      text: "cssgridgarden.com/#pl",
+      url: "http://cssgridgarden.com/#pl"
     },
     layout: "photo-right"
   },
@@ -181,20 +295,37 @@ const slides = [
     subtitle: "Responsive Web Design",
     text:
       "Technika projektowania strony www, tak aby jej wygląd i układ dostosowywał się automatycznie do rozmiaru okna przeglądarki, na której jest wyświetlany np. przeglądarki, smartfonów czy tabletów.",
-    code: [
-      "@media only screen and (min-width: 600px) {",
-      "div.example { font-size: 50px; }",
-      `}`,
-      "",
-      `@media only screen and (max-width: 601px) {`,
-      "div.example { font-size: 80px; }",
-      `}`,
-      "",
-      "@media only screen and (orientation: landscape) {}"
-    ],
     background: "example-rwd.jpg",
     layout: "photo-left"
   },
+  {
+    title: "RWD kod",
+    commentedcode: [
+      {
+        comment:
+          "Upewnij się, że w nagłówku pliku HTML (<head>) znajduje się poniższy kod: ",
+        code:
+          '<meta name="viewport" content="width=device-width, initial-scale=1">'
+      },
+      {
+        comment: " Style działające dla szerokości ekranu większej od 600px",
+        code: "@media only screen and (min-width: 600px) {div.example { ... }"
+      },
+      {
+        comment:
+          "Style dla ekranu pracującego w trybie `landscape` i jednocześnie o podwójnej gęstości pikseli (ta gęstość pikseli jest charakterystyczna dla wyświetlaczy Retina)",
+        code:
+          "@media screen and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) { .class2 { ... }}"
+      },
+      {
+        comment: "Style dla wydruku strony",
+        code: "@media print { .class3 { ... } }"
+      }
+    ],
+    background: "grid1.jpg",
+    layout: "photo-right"
+  },
+
   {
     title: "Zadanie",
     subtitle:
