@@ -2,6 +2,7 @@
   "name": "css-prezentacja",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://magiceportfolio.xon.pl/kurs-frontendu/css",
   "dependencies": {
     "animated": "^0.2.2",
     "react": "^16.6.0",

@@ -67,7 +67,7 @@ const slides = [
   {
     title: "Podstawowe selektory",
     subtitle:
-      "Styl możemy dołączyć na kilka sposobów. Możemy stylować sam tag, nadać tagowi id(musi być unikalne i nie powinno być używane do stylowania), nadać klasę lub dodać atrybut style(nooooo).",
+      "Styl możemy dołączyć na kilka sposobów. Możemy stylować sam tag, nadać tagowi id (musi być unikalne i nie powinno być używane do stylowania), nadać klasę lub dodać atrybut style (nooooo).",
     code: [
       `<div id="nawigacja" class="nawigacja" style="color: red;">Jakiśtam tekst</div>`
     ],
@@ -75,7 +75,7 @@ const slides = [
     layout: "photo-right"
   },
   {
-    title: "Głóne właściwości tekstu",
+    title: "Główne właściwości tekstu",
     commentedcode: [
       { comment: "Rozmiar tekstu", code: "font-size: 16px;" },
       { comment: "Kolor tekstu", code: "color: blue;" },
@@ -155,7 +155,7 @@ const slides = [
         code: "p::first-line { color: #ff0000; font-variant: small-caps;}"
       },
       {
-        comment: "Pierwsza literaście",
+        comment: "Pierwsza litera",
         code: "p::first-letter { color: #ff0000; font-size: xx-large;}"
       },
       {
@@ -168,7 +168,7 @@ const slides = [
   },
   {
     title: "Specificity",
-    subtitle: "Co jest ważniejsze, a co jest mniej ważniejsze",
+    subtitle: "Co jest bardziej lub mniej ważne",
     commentedcode: [
       { comment: "0 0 0 0 0 - najmniej ważne", code: "* - zaznacz wszysko" },
       {
@@ -201,7 +201,7 @@ const slides = [
   {
     title: "Zadanie",
     subtitle:
-      "Do naszych stron z poprzedniego tygodnia podpinamy plik style.css. Dajemy padding: 0, i margin: 0 wszystkim elementom. Ustalamy rozmiar paragrafu 1.1rem i wszystkim tytułom(h1 do h6) dajemy kolor ciemny-szary, i czcionkę Verdana. Wszystkie tytuły h1 wycentruj, zamień na wielkie litery i podkreśl. Wszystkim naszym sekcjom dodajemy unikalne id.",
+      "Do naszych stron z poprzedniego tygodnia podpinamy plik style.css. Dajemy padding: 0, i margin: 0 wszystkim elementom. Ustalamy rozmiar paragrafu 1.1rem i wszystkim tytułom(h1 do h6) dajemy kolor ciemno-szary, i czcionkę Verdana. Wszystkie tytuły h1 wycentruj, zamień na wielkie litery i podkreśl. Wszystkim naszym sekcjom dodajemy unikalne id.",
     background: "question-1.jpg",
     layout: "photo-full",
     link: {
@@ -212,7 +212,7 @@ const slides = [
   {
     title: "Layout - Układ strony",
     subtitle:
-      "Jedną z najważniejszych funkcji CSS-a to precyzowanie układu strony. Dzięki kilku ciekawym funkciom możemy umieści sekcje strony w odpowiednich miejscach. Mamy tu do wyboru, float, flexbox i css grid.",
+      "Jedną z najważniejszych funkcji CSS-a to precyzowanie układu strony. Dzięki kilku ciekawym funkciom możemy umieścić sekcje strony w odpowiednich miejscach. Mamy tu do wyboru: float, flexbox i css grid.",
     background: "grid-2.jpg",
     layout: "photo-left",
     link: {
@@ -282,7 +282,7 @@ const slides = [
   {
     title: "Zadanie",
     subtitle:
-      "Twoja strona index z zeszłego tygodnia miała header i footer. Jesli jeszcze nie ma to podziel środkową częśc na część głowną i część boczną(asside). Użyj flexboxa lub CSS grid żeby odpowiednio podzielić swoją stronę.",
+      "Twoja strona index z zeszłego tygodnia miała header i footer. Jeśli jeszcze nie ma, to podziel środkową częśc na część głowną i część boczną (asside). Użyj flexboxa lub CSS grid żeby odpowiednio podzielić swoją stronę.",
     background: "question-1.jpg",
     layout: "photo-full",
     link: {
@@ -328,7 +328,7 @@ const slides = [
   {
     title: "Zadanie",
     subtitle:
-      "Popraw swoją stronę tak aby wyświetlała się lepiej na mniejszych ekranach(mobile). Teksty mają być mniejsze a sejcja asside powinna iść pod sekcję głowną.",
+      "Popraw swoją stronę tak, aby wyświetlała się lepiej na mniejszych ekranach (mobile). Teksty mają być mniejsze, a sejcja asside powinna iść pod sekcję głowną.",
     background: "question-1.jpg",
     layout: "photo-full",
     link: {
@@ -350,7 +350,7 @@ const slides = [
   {
     title: "Homework",
     subtitle:
-      "Używając na swojej stronie dodaj Bootstrap 4. Popraw swoją nawigację aby używała responsywnego elementu Bootstrap navbar, który będzie na stałe przytwierdzony do górnej części strony. Na nowej sekcji(100 lecie Polski) budujesz tam karuzelę ze zdjęciami i opisem ulubionych polskich postaci ostatnich stu lat. Zbudujesz infografikę, która będzie użwać ikon, kolorów i ciekawego układu. Użyjesz 4 innych elementów, które uczynią Twoją stronę piękną.",
+      "Na swojej stronie dodaj Bootstrap 4. Popraw swoją nawigację tak, aby używała responsywnego elementu Bootstrap navbar, który będzie na stałe przytwierdzony do górnej części strony. W nowej sekcji (100 lecie Polski) zbuduj karuzelę ze zdjęciami i opisem ulubionych polskich postaci ostatnich stu lat. Zbudujesz infografikę, która będzie użwać ikon, kolorów i ciekawego układu. Użyjesz 4 innych elementów, które uczynią Twoją stronę piękną.",
     background: "question-1.jpg",
     layout: "photo-full",
     link: {
