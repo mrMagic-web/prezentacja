@@ -1,362 +1,136 @@
 const slides = [
   {
-    title: "Wprowadzenie do CSS & Bootstap",
-    subtitle: "Jak zrobić żeby moja strona wyglądała LOL",
-    background: "style-1.jpg",
-    layout: "photo-full",
-    icon: "grid layout"
+    title: "CSS Animacje",
+    subtitle: "Czas powiedzieć 'NIE' wszystkim nudnym nieanimowanym stronom",
+    background: "winner.jpg",
+      layout: "photo-full"
   },
   {
-    title: "Winner",
-    subtitle: "Aleksandra",
+    title: "Winners",
+    subtitle: "Kamil, Filip, Cyprian",
     background: "winner.jpg",
     layout: "photo-full",
-    icon: "git square"
   },
-  {
-    title: "Cym jest CSS?",
-    subtitle: "Cascading Style Sheets - Kaskadowe arkusze stylów",
-    text:
-      "Nazwa „kaskadowe arkusze stylów” wynika z faktu, iż gdy reguły CSS wykluczają się wzajemnie w arkuszu zewnętrznym, arkuszu wewnętrznym oraz na poziomie elementów HTML, priorytet stylów ustalany jest hierarchicznie. Przyjęto, że oddziaływanie stylów z arkuszy zewnętrznych może być modyfikowane przez style zdefiniowane w nagłówku dokumentu, te zaś mogą być modyfikowane przez reguły zdefiniowane bezpośrednio w ciele dokumentu. Pierwszeństwo mają zatem style zdefiniowane „bliżej” formatowanego elementu.",
-    list: "",
-    background: "giphy.gif",
+     {
+    title: "CSS Transform",
+    subtitle: "Transform zmienia krztałt i pozycje obiektu. ",
+    code: [
+        
+    ],
+  
+    background: "winner.jpg",
+    layout: "photo-full",
+  },
+
+ {
+    title: "Keyframes",
+    subtitle: "Definiują stan obiektu w poszczególnych krokach animacji",
+      commentedcode: [
+        { comment: "Przesuń obiekt o 300px horyzontalnie", code: "transform: translateX(300px)" },
+        { comment: "Przesuń obiekt o 150px wertykalnie", code: "transform: translateY(150px)" },
+        { comment: "Obróć o 45stopni względem osi x ", code: "transform: rotateX(45deg)" },
+        { comment: "Pochylenie elementu", code: "transform: skew(20deg); transform: skew(15deg, -30deg);" }, 
+        { comment: "Zwiększanie elementu", code: "transform: scale(2);" }, 
+        { comment: "Zmiana w wielu płaszczyznach", code: "transform: translateX(200px) skew(20deg) scale(0.5);" }, 
+    ],
+  
+    background: "winner.jpg",
+    layout: "photo-full",
+  },
+   {
+    title: "CSS 3d",
+    subtitle: "W css możemy manipulować obiektami w 3 wymiarach. Używamy do tego koordynatów X, Y i Z",
+   commentedcode: [
+        { comment: "Obróć o 45stopni względem osi y", code: "transform: rotateY(45deg)" },
+        { comment: "Perespektywa. Możemy ją nadać elementowi lub jego rodzicowi", code: "perespectove: 1000px;" },
+        { comment: "Poruszanie obiektem w 3 wymiarach", code: "transform: translate3d(100px, 200px, -150px);" },
+    ],
+
+    background: "3d-xyz.png",
     layout: "photo-left",
-    icon: "question circle outline"
   },
-  {
-    title: "CSS w akcji",
-    subtitle: "Układ, zdjęcia, tekst, pozycja, kolory i wiele innych",
-    link: {
-      text: "CSS Zen Garden, jedna strona w ponad 200 wersjach graficznych",
-      url: "http://www.csszengarden.com/221/"
-    },
-    background: "style-3.jpg",
-    layout: "photo-right"
-  },
-  {
-    title: "Gdzie wrzucić CSS-y",
-    subtitle:
-      "Są trzy sposoby umieszczania CSS-ów na stronie. Ale tylko jeden dobry.",
-    code: [
-      `<h1 style="color:blue;">This is a Blue Heading</h1>`,
-      " ",
-      "<style>",
-      "h1 {color: blue;}",
-      "</style>",
-      " ",
-      `<link rel="stylesheet" href="styles.css">`
-    ]
-  },
-  {
-    title: "Plik CSS",
-    subtitle: "Linkujemy plik CSS",
-    code: [`<link rel="stylesheet" href="styles.css">`]
-  },
-  {
-    title: "Składnia",
-    subtitle:
-      "Reguła składa się z selektora oraz deklaracji. Selektor określa element lub grupę elementów, którego ma dotyczyć deklaracja.",
-    code: [
-      `selektor { właściwość: wartość }`,
-      "selektor1, selektor2 {  właściwość1: wartość1;  właściwość2: wartość2;}",
-      "h1 { color: blue; font-size: 24px; }"
+   {
+    title: "CSS Transitions",
+    subtitle: "Pozwalają nam na stosowanie podstawowych animacji elementu.",
+   commentedcode: [
+        { comment: "Mając podstawowy element...", code: ".button {background: red;}" },
+        { comment: "... możemy dodać efekt najechania na element", code: ".button:hover {background: blue; transform: scale(1.5)}" },
+       { comment: "Żeby animacja była bardziej płynna możemy dodać transition", code: ".button {transition: .5s}" },
+       { comment: "Możemy sprecyzować tranzycje do poszczególnych elementów", code: ".button {transition: background .5s ease-in, transform .25s ; }" },
+        { comment: "Opóźnienie tranzycji", code: ".button {transition: background .5s ease-in, transform .25s .5s ; }" },
     ],
-    background: "style-5.jpg",
-    layout: "photo-left"
+
+    background: "3d-xyz.png",
+    layout: "photo-left",
   },
-  {
-    title: "Podstawowe selektory",
-    subtitle:
-      "Styl możemy dołączyć na kilka sposobów. Możemy stylować sam tag, nadać tagowi id (musi być unikalne i nie powinno być używane do stylowania), nadać klasę lub dodać atrybut style (nooooo).",
-    code: [
-      `<div id="nawigacja" class="nawigacja" style="color: red;">Jakiśtam tekst</div>`
-    ],
-    background: "color-1.jpg",
-    layout: "photo-right"
-  },
-  {
-    title: "Główne właściwości tekstu",
-    commentedcode: [
-      { comment: "Rozmiar tekstu", code: "font-size: 16px;" },
-      { comment: "Kolor tekstu", code: "color: blue;" },
-      {
-        comment: "Podkreślenie, przekreślenie",
-        code: "text-decoration: overline / underline / line-through;"
-      },
-      {
-        comment: "Zmiana wielkości tekstu",
-        code: "text-transform: uppercase / lowercase / capitalize"
-      },
-      { comment: "Odległośc między literami", code: "letter-spacing: 3px;" },
-      { comment: "Wysokość linii", code: "line-height: 1.2rem" },
-      {
-        comment: "Odwrocenie tekstu, w przypadku pisma arabskiego",
-        code: " direction: rtl;"
-      }
-    ]
-  },
-  {
-    title: "Tło strony lub elementu",
-    commentedcode: [
-      { comment: "Kolor tła", code: "background-color: lightblue;" },
-      {
-        comment: "Zdjęcie jako tło",
-        code: "background-image: url('paper.gif');"
-      },
-      {
-        comment: "Powtarzanie tła, w przypadku zdjęcia",
-        code: "background-repeat: repeat-x / repeat-y / no-repeat"
-      },
-      {
-        comment: "Pozycja tła",
-        code: "background-position: right top;"
-      },
-      {
-        comment: "Rozmiar tła",
-        code: "background-size: 300px 100px / 30% / auto / cover / contain;"
-      }
-    ]
-  },
-  {
-    title: "Pseudoklasy",
-    commentedcode: [
-      {
-        comment: "Stosujemy wpisując: po selektorze",
-        code: "selector:pseudo-class {property:value;}"
-      },
-      {
-        comment: "Właściwości linku, nie odwiedzonego i odwiedzonego",
-        code:
-          "a:link { color: #FF0000; font-size: 14px;} a:visited { color: #00FF00; }"
-      },
-      {
-        comment: "Właściwości po najechaniu, zaznaczonego link",
-        code: "a:hover { color: #FF00FF;} a:active {color: #0000FF;}"
-      },
-      {
-        comment: "Pierwsze dziecko elementu, kolejny element tego typu",
-        code: "p:first-child {color: blue;}, p:nth-of-type(2)"
-      },
-      {
-        comment: "Negacja",
-        code: ":not(p) {background: #ff0000;}"
-      }
-    ]
-  },
-  {
-    title: "Pseudoelementy",
-    commentedcode: [
-      {
-        comment: "Stosujemy wpisując :: po selektorze",
-        code: "p::first-line { color: #ff0000; font-variant: small-caps;}"
-      },
-      {
-        comment: "Pierwsza linia tekstu",
-        code: "p::first-line { color: #ff0000; font-variant: small-caps;}"
-      },
-      {
-        comment: "Pierwsza litera",
-        code: "p::first-letter { color: #ff0000; font-size: xx-large;}"
-      },
-      {
-        comment:
-          "Before - przed, After - po - tworzsymy miejsce w przestrzeni elementu",
-        code:
-          "h1::before { content: url(smiley.gif);} h1::after { content: ''; width: 200px; height: 150px; position: absolute}"
-      }
-    ]
-  },
-  {
-    title: "Specificity",
-    subtitle: "Co jest bardziej lub mniej ważne",
-    commentedcode: [
-      { comment: "0 0 0 0 0 - najmniej ważne", code: "* - zaznacz wszysko" },
-      {
-        comment: "0 0 0 0 1 - sprecyzowanie tagu ma wyższe znaczenie",
-        code: "div, p, li"
-      },
-      { comment: "0 0 0 1 0 - nadanie klasy elementowi ", code: ".klasa" },
-      {
-        comment: '0 0 0 1 1 - klasa z z konkretnym tagiem <p class="klasa">',
-        code: ".klasa p"
-      },
-      {
-        comment: "0 0 1 0 0 - możemy miec tylko elementy z unikalnym id",
-        code: "#id"
-      },
-      {
-        comment:
-          "0 1 0 0 0 - style ma wysokie znaczenie ale nie zalecane jest stosowanie",
-        code: 'style="font-size: 10"'
-      },
-      {
-        comment:
-          "1 0 0 0 0 - używamy !important jak nic innego nie działa. Unikaj jak ognia.",
-        code: "!important"
-      }
-    ],
-    background: "specificity.png",
-    layout: "no-photo"
-  },
-  {
+     {
     title: "Zadanie",
     subtitle:
-      "Do naszych stron z poprzedniego tygodnia podpinamy plik style.css. Dajemy padding: 0, i margin: 0 wszystkim elementom. Ustalamy rozmiar paragrafu 1.1rem i wszystkim tytułom(h1 do h6) dajemy kolor ciemno-szary, i czcionkę Verdana. Wszystkie tytuły h1 wycentruj, zamień na wielkie litery i podkreśl. Wszystkim naszym sekcjom dodajemy unikalne id.",
+      "10 Minut",
     background: "question-1.jpg",
     layout: "photo-full",
-    link: {
-      text: "w3schools.com/css",
-      url: "https://www.w3schools.com/css"
-    }
+    list: ["Dodajemy trzecią wartość do tranzycji naszego przycisku.", "Zmienić opóźnienia animacji żeby jeszcze bardziej zwiększyć efekt animiacji."]
   },
   {
-    title: "Layout - Układ strony",
-    subtitle:
-      "Jedną z najważniejszych funkcji CSS-a to precyzowanie układu strony. Dzięki kilku ciekawym funkciom możemy umieścić sekcje strony w odpowiednich miejscach. Mamy tu do wyboru: float, flexbox i css grid.",
-    background: "grid-2.jpg",
-    layout: "photo-left",
-    link: {
-      text: "w3schools.com/css",
-      url: "https://www.w3schools.com/css"
-    }
-  },
-  {
-    title: "Box Model",
-    subtitle: "Model pudełkowy CSS",
-    background: "css-box-model.png",
-    commentedcode: [
-      {
-        comment:
-          "Elementom HTML możemy nadawać wysokość i szerokość za pomocą właściwości height oraz width.",
-        code: "width: 300px; height: 200px;"
-      },
-      {
-        comment: "Wypełnienie (padding), Dodaję do elmementu wypełnienie",
-        code: "padding: 20px;"
-      },
-      {
-        comment:
-          "Obramowanie (border) - możemy nadawać naszym elementom ramki o różnych stylach.",
-        code: "border: 2px dotted red;"
-      },
-      {
-        comment:
-          "Margines (margin) - Margines jest to odległość między krawędzią (ramką) elementu a innym, sąsiadującym elementem. ",
-        code: "margin: 15px; margin-right: 4px;"
-      }
+    title: "Animowanie",
+    subtitle: "Jak już zdefiniowaliśmy animację musimy zdefiniować jej właściwości",
+    code: [
+        'selektor{animation-name: nazwa czas typ animacji opóźnienie powtórzenia kierunek  }'
     ],
-    layout: "photo-left"
+    commentedcode: [
+        { comment: "Nazwa animacji", code: "animation-name: animowany_robot;" },
+        { comment: "Czas trwania animacji", code: "animation-duration: 3s;" },
+        { comment: "Szybkość wykonywania animacji w różnych fazach jego trwania", code: "animation-timing-function: ease-in; // linear, ease, sease-in, ease-in-out, cubic-besier" },
+        { comment: "Opóźnienie rozpoczęcia animacji", code: "animation-delay: 2s;" },
+        { comment: "Ilość powtórzeń animacji", code: "animation-iteration-count: 10; // wartość liczbowa, infinite" },
+        { comment: "Kierunek animacji", code: "animation-direction: reverse; // normal, reverse, alternate, alternate-reverse" },
+    ],
+    background: "winner.jpg",
+    layout: "photo-full",
   },
-  {
-    title: "Budowanie układu strony",
-    subtitle: "Flexbox vs CSS Grid vs inne",
-    text:
-      "Ściągamy kod z poniższego repozytorium. W katalogu layout mamy ciekawy przykład układu",
-    background: "bootstap-1.jpg",
-    link: {
-      text: "github.com/mrMagic-web/kurs-frontendu",
-      url: "https://github.com/mrMagic-web/kurs-frontendu"
-    },
-    layout: "photo-right"
+      {
+    title: "Animation",
+    subtitle: "Skrócony zapis",
+    code: [
+        'selektor{animation-name: nazwa czas typ animacji opóźnienie powtórzenia kierunek  }'
+    ],
+    commentedcode: [
+        { comment: "Nazwa animacji", code: "animation-name: animowany_robot;" },
+        { comment: "Czas trwania animacji", code: "animation-duration: 3s;" },
+        { comment: "Szybkość wykonywania animacji w różnych fazach jego trwania", code: "animation-timing-function: ease-in; // linear, ease, sease-in, ease-in-out, cubic-besier" },
+        { comment: "Opóźnienie rozpoczęcia animacji", code: "animation-delay: 2s;" },
+        { comment: "Ilość powtórzeń animacji", code: "animation-iteration-count: 10; // wartość liczbowa, infinite" },
+        { comment: "Kierunek animacji", code: "animation-direction: reverse; // normal, reverse, alternate, alternate-reverse" },
+    ],
+    background: "winner.jpg",
+    layout: "photo-full",
   },
-  {
-    title: "Flexboxa Froggy",
-    subtitle: "Flexbox to gra, ktróa pomaga w opanowaniu Flexboxa. ",
-    background: "froggy.png",
-    link: {
-      text: "flexboxfroggy.com/#pl",
-      url: "https://flexboxfroggy.com/#pl"
-    },
-    layout: "photo-left"
+    {
+    title: "Funkcje czasowe i Easing",
+    subtitle: "Funkcja określająca szybkość animacji w różnych momentach",
+    code: [
+        'animation-timing-function: (linear | ease | ease-in | ease-out | ease-in-out | step-start | step-end | steps(int,start | end) | cubic-bezier(n,n,n,n) | initial | inherit)'
+    ],
+    commentedcode: [
+        { comment: "Stała prędkość podczas całej animacji", code: "animation-timing-function: linear" },
+        { comment: "wolne rozpoczęcie, następnie przyspieszenie i zwolnienie przed końcem animacji", code: "animation-timing-function: ease" },
+        { comment: "powolne rozpoczęcie, szybkie zakończenie", code: "animation-timing-function: ease-in" },
+        { comment: "szybkie rozpoczęcie, powolne zakończenie", code: "animation-timing-function: ease-out" },
+        { comment: "wolne rozpoczęcie i zakończenie, szybki środek animacji", code: "animation-timing-function: ease-in-out" },
+       { comment: "własne ustawienie szybkości. http://cubic-bezier.com", code: "animation-timing-function: cubic-bezier(.1,.71,.94,.23)" },
+
+    ],
+    background: "winner.jpg",
+    layout: "photo-full",
   },
-  {
-    title: "Gridgarden",
-    subtitle: "Kolejna super fajna gra",
-    background: "gridgarden.png",
-    link: {
-      text: "cssgridgarden.com/#pl",
-      url: "http://cssgridgarden.com/#pl"
-    },
-    layout: "photo-right"
-  },
-  {
+    {
     title: "Zadanie",
     subtitle:
-      "Twoja strona index z zeszłego tygodnia miała header i footer. Jeśli jeszcze nie ma, to podziel środkową częśc na część głowną i część boczną (asside). Użyj flexboxa lub CSS grid żeby odpowiednio podzielić swoją stronę.",
+      "15 Minut",
     background: "question-1.jpg",
     layout: "photo-full",
-    link: {
-      text: "w3schools.com/css",
-      url: "https://www.w3schools.com/css"
-    }
+    list: ["Dodajemy robotowi 3 nowe keyframy w %.", "Robot powinien się poruszać nie tylko horyzontalnie ale również z góry w dół ekranu",
+          "Animacja powinna powtarzać się w nieskończonośc", "Robot powinien się obracać"]
   },
-  {
-    title: "RWD",
-    subtitle: "Responsive Web Design",
-    text:
-      "Technika projektowania strony www, tak aby jej wygląd i układ dostosowywał się automatycznie do rozmiaru okna przeglądarki, na której jest wyświetlany np. przeglądarki, smartfonów czy tabletów.",
-    background: "example-rwd.jpg",
-    layout: "photo-left"
-  },
-  {
-    title: "RWD kod",
-    commentedcode: [
-      {
-        comment:
-          "Upewnij się, że w nagłówku pliku HTML (<head>) znajduje się poniższy kod: ",
-        code:
-          '<meta name="viewport" content="width=device-width, initial-scale=1">'
-      },
-      {
-        comment: " Style działające dla szerokości ekranu większej od 600px",
-        code: "@media only screen and (min-width: 600px) {div.example { ... }"
-      },
-      {
-        comment:
-          "Style dla ekranu pracującego w trybie `landscape` i jednocześnie o podwójnej gęstości pikseli (ta gęstość pikseli jest charakterystyczna dla wyświetlaczy Retina)",
-        code:
-          "@media screen and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) { .class2 { ... }}"
-      },
-      {
-        comment: "Style dla wydruku strony",
-        code: "@media print { .class3 { ... } }"
-      }
-    ],
-    background: "grid1.jpg",
-    layout: "photo-right"
-  },
-  {
-    title: "Zadanie",
-    subtitle:
-      "Popraw swoją stronę tak, aby wyświetlała się lepiej na mniejszych ekranach (mobile). Teksty mają być mniejsze, a sejcja asside powinna iść pod sekcję głowną.",
-    background: "question-1.jpg",
-    layout: "photo-full",
-    link: {
-      text: "w3schools.com/css/css_rwd_intro",
-      url: "https://www.w3schools.com/css/css_rwd_intro.asp"
-    }
-  },
-  {
-    title: "Bootstrap",
-    text:
-      "Bootstrap jest jedną z najpopularniejszych bibliotek CSS. Jest zbiorem snippetów HTML, klas CSS oraz skryptów JS pozwalającym na szybkie budowanie stron RWD. Dzięki siatce(grid) możemy stworzyć szkielet naszej witryny a do tego użyć różnych gotowych elementów intenetowych.",
-    background: "bootstrap-3.jpg",
-    layout: "photo-left",
-    link: {
-      text: "getbootstrap.com",
-      url: "https://getbootstrap.com/"
-    }
-  },
-  {
-    title: "Homework",
-    subtitle:
-      "Na swojej stronie dodaj Bootstrap 4. Popraw swoją nawigację tak, aby używała responsywnego elementu Bootstrap navbar, który będzie na stałe przytwierdzony do górnej części strony. W nowej sekcji (100 lecie Polski) zbuduj karuzelę ze zdjęciami i opisem ulubionych polskich postaci ostatnich stu lat. Zbudujesz infografikę, która będzie użwać ikon, kolorów i ciekawego układu. Użyjesz 4 innych elementów, które uczynią Twoją stronę piękną.",
-    background: "question-1.jpg",
-    layout: "photo-full",
-    link: {
-      text: "w3schools.com/css/css_rwd_intro",
-      url: "https://www.w3schools.com/css/css_rwd_intro.asp"
-    }
-  }
 ];
 export default slides;
