@@ -11,21 +11,48 @@ const slides = [
     background: "winner.jpg",
     layout: "photo-full",
   },
-     {
-    title: "CSS Transform",
-    subtitle: "Transform zmienia krztałt i pozycje obiektu. ",
-    code: [
-        
-    ],
-  
+{
+    title: "+ animacji na stronie",
+    subtitle: "Animacja ożywi stronę i podkreśli istotne interakcje",
+    list: ["zwraca uwagę na element", "podkreśla istotną zmianę na stronie", "istotny element dobrego UX-u", "pozwala na pokazanie, że coś zajmie czas (loading...)" , "zwiększa efekt wow waszych stron"],     
     background: "winner.jpg",
     layout: "photo-full",
   },
-
- {
-    title: "Keyframes",
-    subtitle: "Definiują stan obiektu w poszczególnych krokach animacji",
-      commentedcode: [
+    {
+    title: "- animacji na stronie",
+    subtitle: "Istotne jest zastanowić się nad celem animacji.",
+    text: "Nie tworzymy animowanych elementów po to żeby się tylko pokazać, albo żeby były. Każda decyzja o użyciu danego efektu powinna wywodzić się z konkretnej potrzeby.",
+    list: ["wymaga sporo pracy", "może spowolnić stronę", "roprasza użytkownika" ],        
+    background: "winner.jpg",
+    layout: "photo-full",
+  },
+  {
+    title: "12 zasad animacji Disneya",
+    subtitle: "bo animacje nie powinny być przypadkowe",
+    
+    list: ["Zgniatanie i rozciąganie/Squash and stretch", "Wyprzedzenie/Anticipation", "Inscenizacja/Staging - kompozycja sceny", "Rysowanie progresywne lub według klatek kluczowych", "Zazębianie się akcji i podążanie za akcją", "Rozpędzanie i zwalnianie" ],
+    link: {
+      text: "12 zasad animacji Disneya, czyli jak nakręcić idealny film animowany",
+      url: "https://lekturaobowiazkowa.pl/na-ekranie/12-zasad-animacji-disneya/"
+    },
+    background: "winner.jpg",
+    layout: "photo-full",
+  },
+  {
+    title: "12 zasad animacji Disneya - cd",
+    list: [" Łuki/Arcs", " Akcja drugoplanowa", "Synchronizacja/ timing", "Wyolbrzymianie", "Dobry rysunek", "Urok" ],
+    link: {
+      text: "Ilusion of life",
+      url: "https://vimeo.com/93206523"
+    },
+    commentedcode: [{comment: "12 Principles of Animation", code: "https://youtu.be/uDqjIdI4bF4"}],
+    background: "winner.jpg",
+    layout: "photo-full",
+  },
+    {
+    title: "CSS Transform",
+    subtitle: "Transform zmienia krztałt i pozycje obiektu. ",
+    commentedcode: [
         { comment: "Przesuń obiekt o 300px horyzontalnie", code: "transform: translateX(300px)" },
         { comment: "Przesuń obiekt o 150px wertykalnie", code: "transform: translateY(150px)" },
         { comment: "Obróć o 45stopni względem osi x ", code: "transform: rotateX(45deg)" },
@@ -33,7 +60,6 @@ const slides = [
         { comment: "Zwiększanie elementu", code: "transform: scale(2);" }, 
         { comment: "Zmiana w wielu płaszczyznach", code: "transform: translateX(200px) skew(20deg) scale(0.5);" }, 
     ],
-  
     background: "winner.jpg",
     layout: "photo-full",
   },
@@ -88,7 +114,7 @@ const slides = [
     background: "winner.jpg",
     layout: "photo-full",
   },
-      {
+    {
     title: "Animation",
     subtitle: "Skrócony zapis",
     code: [
@@ -132,5 +158,22 @@ const slides = [
     list: ["Dodajemy robotowi 3 nowe keyframy w %.", "Robot powinien się poruszać nie tylko horyzontalnie ale również z góry w dół ekranu",
           "Animacja powinna powtarzać się w nieskończonośc", "Robot powinien się obracać"]
   },
+  {
+    title: "Animation",
+    subtitle: "Skrócony zapis",
+    code: [
+        'selektor{animation-name: nazwa czas typ animacji opóźnienie powtórzenia kierunek  }'
+    ],
+    commentedcode: [
+        { comment: "Nazwa animacji", code: "animation-name: animowany_robot;" },
+        { comment: "Czas trwania animacji", code: "animation-duration: 3s;" },
+        { comment: "Szybkość wykonywania animacji w różnych fazach jego trwania", code: "animation-timing-function: ease-in; // linear, ease, sease-in, ease-in-out, cubic-besier" },
+        { comment: "Opóźnienie rozpoczęcia animacji", code: "animation-delay: 2s;" },
+        { comment: "Ilość powtórzeń animacji", code: "animation-iteration-count: 10; // wartość liczbowa, infinite" },
+        { comment: "Kierunek animacji", code: "animation-direction: reverse; // normal, reverse, alternate, alternate-reverse" },
+    ],
+    background: "winner.jpg",
+    layout: "photo-full",
+  }
 ];
 export default slides;
