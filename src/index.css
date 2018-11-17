@@ -86,12 +86,13 @@ ul.full > li {
   line-height: 1.6rem;
   font-family: "Merriweather", serif;
 }
-.page {
-  border-top: 1px solid lightblue;
-}
+
 .commented-code span {
   color: yellow;
   font-family: cursive;
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.slick-dots {
+  bottom: 20px;
 }
