@@ -82,9 +82,13 @@ ul.full {
 }
 ul.full > li {
   margin-left: 20px;
-  font-size: 1.2rem;
-  line-height: 1.6rem;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
   font-family: "Merriweather", serif;
+}
+a.link {
+    font-size: 1.6rem;
+    color: blueviolet;
 }
 
 .commented-code span {

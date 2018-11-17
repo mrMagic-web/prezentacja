@@ -47,7 +47,7 @@ const ContentArea = props => {
         </Segment>
       ) : null}
       {props.link ? (
-        <a className="full" href={props.link.url}>
+        <a className="full link" href={props.link.url}>
           {props.link.text}
         </a>
       ) : null}
