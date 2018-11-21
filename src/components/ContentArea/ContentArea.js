@@ -38,7 +38,9 @@ const ContentArea = props => {
               <span>{item.comment}</span>
               <br />
               <code className="full">
-                {item.code}
+                {item.code.map(line => (
+                  <div>`${line}`</div>
+                ))}
                 <br />
                 <br />
               </code>
