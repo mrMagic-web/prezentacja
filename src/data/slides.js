@@ -9,17 +9,17 @@ const slides = [
     icon: "winner",
     title: "Programowanie to rozwiązywanie problemów",
     subtitle:
-      "... i jak w przypadku każdego skomplikowanego problemu nie obędzie się bez frustracji. Jednak rozwiązanie problemu przynosi sporo satysfakcji.",
+      "... i jak w przypadku każdego skomplikowanego problemu nie obędzie się bez frustracji. Jednak daje też sporo satysfakcji.",
     background: "js/keep-calm.png",
-    layout: "photo-full"
+    layout: "photo-left"
   },
   {
     title: "Z czego składa się strona internetowa?",
     list: [
-      "HTML - treść strony(zdjęcia, tekst, linki, forma kontaktowa)",
-      "CSS - warstwa wizualna strony internetowej(kolory, rozmiary, układ strony)",
+      "☑ HTML - treść strony(zdjęcia, tekst, linki, forma kontaktowa)",
+      "☑ CSS - warstwa wizualna strony internetowej(kolory, rozmiary, układ strony)",
       "Java Script - frontend - logika i interakcje (jak tu kliknę co się stanie?)",
-      "Java Script - backend - Obsługa serwera(Node.js)"
+      "Java Script (Node.js), PHP, Ruby, Java - backend - Obsługa serwera"
     ],
     background: "js/website-1.jpg",
     layout: "photo-right"
@@ -27,9 +27,10 @@ const slides = [
   {
     title: "Czym jest JavaScript",
     subtitle:
-      "Język skryptowy używany do obsługi strony w przeglądarce (front end) i po stronie serwerów (front end) na platformie Node.",
-    text:
-      "Pod koniec lat 90. organizacja ECMA wydała na podstawie JavaScriptu standard języka skryptowego o nazwie ECMAScript. Przez wiele lat rozwój JS był raczej ograniczony aby w ostatnich latach stać się jednym za najpopularniejszych języków programowania. Obecnie ES jest w wersji 8(2017) choć nie wszystkie funkcje są wspierane przez przeglądarki.",
+      "Język skryptowy używany do obsługi strony w przeglądarce (front end) i po stronie serwerów (back end) na platformie Node.",
+    list: [
+      "Pod koniec lat 90. organizacja ECMA wydała na podstawie JavaScriptu standard języka skryptowego o nazwie ECMAScript.", "Brak rozwoju ES między 1999 a 2009", "2009 Wersja 5", "2015 - ES6", "Obecnie ES jest w wersji 9(2017).",
+    ],
     background: "js/js-1.jpg",
     layout: "photo-right"
   },
@@ -49,7 +50,7 @@ const slides = [
   {
     title: "Deklaracja zmiennej lub stałej",
     text:
-      "Zmienne i stałe deklarujemy używając var, let(zmienna) lub const(stała) przed nazwą zmiennej. Potem możemy przypisać jej wartośc. ",
+      "Zmienne i stałe deklarujemy używając var, let. Stałe deklarujemy słowem const przed nazwą zmiennej. Potem możemy przypisać jej wartośc. ",
     commentedcode: [
       {
         comment:
@@ -78,7 +79,7 @@ const slides = [
     subtitle:
       "Zmienne to coś w rodzaju 'pudełek', w których pod nazwami możemy trzymać dane.",
     text:
-      "W JS używamy 5-ciu podstawowych typów danych. Dzielą się na typy proste(numer, ciąg znaków, wartość logiczna, null i undefined,) i typy złożone",
+      "W JS używamy 5-ciu podstawowych typów danych. Dzielą się na typy proste(numer, ciąg znaków, wartość logiczna, null i undefined,) i typy złożone. Możemy sprawdzić typ wywołując funkcję typeof",
     commentedcode: [
       { comment: "Liczby", code: ["let i = 4; const number = 0.79;"] },
       {
@@ -90,8 +91,8 @@ const slides = [
         code: ["const a = true, b = false"]
       },
       {
-        comment: "null i undefined",
-        code: ["const n = null;", "let u; // undefined"]
+        comment: "sprawdzanie typu",
+        code: ["typeof x"]
       }
     ]
   },
@@ -674,6 +675,14 @@ const slides = [
     ],
     background: "js/arrow.jpg",
     layout: "photo-left"
+  },
+      {
+    title: "Homework",
+    subtitle:
+      "Zarejestruj się na serwisie codewars.com",
+    list: ["Zdobądź wystarczającą liczbę puntów żeby dojść do kolejnego poziomu(7kyu)", "Sprubuj zrobić jedno zadanie z poziomu 6kyu", "zaproś innych uczestników kursu do współzawodniczenia"],
+    background: "js/codewars.png",
+    layout: "photo-full"
   }
 ];
 export default slides;

@@ -2,7 +2,7 @@ import React from "react";
 import { Header, Icon, Segment } from "semantic-ui-react";
 const ContentArea = props => {
   return (
-    <div>
+    <div className="content-area">
       {props.icon ? (
         <Icon name={props.icon} className="props.icon" size="huge" />
       ) : null}
@@ -24,26 +24,31 @@ const ContentArea = props => {
       {props.code ? (
         <Segment inverted>
           {props.code.map((item, i) => (
-            <code className="full" key={`code-${props.slideNumber}-${i}`}>
+            <div
+              className="full single-line"
+              key={`code-${props.slideNumber}-${i}`}
+            >
               {item}
-              <br />
-            </code>
+            </div>
           ))}
         </Segment>
       ) : null}
       {props.commentedcode ? (
         <Segment className="commented-code" inverted>
           {props.commentedcode.map((item, i) => (
-            <div key={`commentedcode-${props.slideNumber}-${i}`}>
-              <span>{item.comment}</span>
-              <br />
+            <div
+              className="code-line"
+              key={`commentedcode-${props.slideNumber}-${i}`}
+            >
+              <span>
+                <i>{item.comment}</i>
+              </span>
               <code className="full">
                 {item.code.map((line, k) => (
                   <div key={`commentedcode-${props.slideNumber}-${i}${k}`}>
                     {line}
                   </div>
                 ))}
-                <br />
                 <br />
               </code>
             </div>

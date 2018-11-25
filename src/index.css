@@ -3,6 +3,7 @@ body,
 #root {
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
 body {
@@ -19,7 +20,12 @@ code {
     monospace;
   padding: 20px 30px;
 }
-
+.code-line {
+  padding-bottom: 10px;
+}
+.code-line span {
+  padding-bottom: 20px;
+}
 .slide {
   min-height: 100%;
   position: relative;
@@ -91,17 +97,23 @@ a.link {
   font-size: 1.6rem;
   color: blueviolet;
 }
-
-.commented-code span {
+.commented-code {
+  font-size: 1.2rem !important;
   color: yellow;
   font-family: cursive;
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.commented-code span {
+  color: yellow;
+}
 .slick-dots {
   position: fixed;
   bottom: 20px;
 }
-.page {
-  padding: 20px;
+.single-line {
+  font-size: 1.2rem;
+}
+.content-area {
+  padding: 20px calc(1rem + 15px);
 }
