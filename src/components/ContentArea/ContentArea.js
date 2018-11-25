@@ -38,8 +38,10 @@ const ContentArea = props => {
               <span>{item.comment}</span>
               <br />
               <code className="full">
-                {item.code.map(line => (
-                  <div>`${line}`</div>
+                {item.code.map((line, k) => (
+                  <div key={`commentedcode-${props.slideNumber}-${i}${k}`}>
+                    {line}
+                  </div>
                 ))}
                 <br />
                 <br />

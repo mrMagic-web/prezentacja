@@ -17,6 +17,7 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+  padding: 20px 30px;
 }
 
 .slide {
@@ -87,8 +88,8 @@ ul.full > li {
   font-family: "Merriweather", serif;
 }
 a.link {
-    font-size: 1.6rem;
-    color: blueviolet;
+  font-size: 1.6rem;
+  color: blueviolet;
 }
 
 .commented-code span {
@@ -98,5 +99,9 @@ a.link {
     monospace;
 }
 .slick-dots {
+  position: fixed;
   bottom: 20px;
+}
+.page {
+  padding: 20px;
 }

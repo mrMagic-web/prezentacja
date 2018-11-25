@@ -17,7 +17,7 @@ class App extends Component {
       <div className="App">
         <Slider {...settings}>
           {slides.map((slide, i) => (
-            <div>
+            <div key={slide.title + "-" + i}>
               <Slide
                 slideNumber={i}
                 key={slide.title}
