@@ -170,14 +170,22 @@ const slides = [{
         layout: "photo-full"
     },
     {
+        title: "Zadanie",
+        subtitle: "Na zabicie czasu",
+        list: ["Animacja miała wpisane ręcznie wszystkie parametry animacji", "Użyj funkcji JavaScriptowej Math.rand do generowania przypadkowych czasow odpalenia rakiety i animacji startu"],
+        background: "question-1.jpg",
+        layout: "photo-left"
+    },
+    {
         title: "Homework",
         subtitle: "Zbuduj stronę, ktróa pokaże dowolnego Api",
-        list: ["Aplikacja powinna zawierać wyszukiwarkę", "W ciekawy sposob wyświetlić wyszukne dane", "Aplikacja powinna wyglądać ładnie dla oka"],
+        list: ["Znajdź swoje animowane rakiety", "W ciekawy sposob wyświetlić wyszukne dane", "Aplikacja powinna wyglądać ładnie dla oka"],
         link: {
             text: "API Lista ",
             url: "https://medium.com/@vicbergquist/18-fun-apis-for-your-next-project-8008841c7be9"
         },
         layout: "photo-full"
-    }
+    },
+
 ];
 export default slides;
