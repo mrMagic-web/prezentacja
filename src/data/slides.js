@@ -168,7 +168,8 @@ const slides = [{
         subtitle: "Zakodujemy aplikacje pogodową",
         list: ["Aplikacja powinna zawierać wyszukiwarkę miasta", "W ciekawy sposob wyświetlić dane temperatury i inne przydatne informacje", "gdy użytkownik wyszuka nowego miasta, aplikacja bez przeładowania pokaże nowe dane"],
         layout: "photo-full"
-    }, {
+    },
+    {
         title: "Homework",
         subtitle: "Zbuduj stronę, ktróa pokaże dowolnego Api",
         list: ["Aplikacja powinna zawierać wyszukiwarkę", "W ciekawy sposob wyświetlić wyszukne dane", "Aplikacja powinna wyglądać ładnie dla oka"],
