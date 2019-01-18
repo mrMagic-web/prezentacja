@@ -1,35 +1,35 @@
 {
-  "name": "css-prezentacja",
-  "version": "0.1.0",
-  "private": true,
-  "homepage": "http://magiceportfolio.xon.pl/kurs-frontendu/js-intro",
-  "dependencies": {
-    "animated": "^0.2.2",
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.0",
-    "react-slick": "^0.23.2",
-    "react-transition-group": "^2.5.0",
-    "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^0.83.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
-  "devDependencies": {
-    "create-react-component-folder": "^0.1.26"
-  }
+    "name": "css-prezentacja",
+    "version": "0.1.0",
+    "private": true,
+    "homepage": "http://magiceportfolio.xon.pl/kurs-frontendu/js2",
+    "dependencies": {
+        "animated": "^0.2.2",
+        "react": "^16.6.0",
+        "react-dom": "^16.6.0",
+        "react-router-dom": "^4.3.1",
+        "react-scripts": "2.1.0",
+        "react-slick": "^0.23.2",
+        "react-transition-group": "^2.5.0",
+        "semantic-ui-css": "^2.4.1",
+        "semantic-ui-react": "^0.83.0"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+    ],
+    "devDependencies": {
+        "create-react-component-folder": "^0.1.26"
+    }
 }
