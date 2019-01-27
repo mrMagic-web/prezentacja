@@ -1,190 +1,288 @@
 const slides = [{
-        title: "Java Script part 2",
-        subtitle: "Komunikacja z serwerem. ",
-        background: "js/code.gif",
+        title: "React.js",
+        background: "react/reactjs.png",
         layout: "photo-full"
     },
     {
         icon: "winner",
-        title: "Codewars?",
-        subtitle: "Poziom 7? 6? 5?",
+        title: "Homework",
+        subtitle: "Zadania z API",
         layout: "photo-left",
         background: "question-1.jpg",
     },
     {
-        title: "Rozgrzewka",
-        subtitle: "Otwórz folder zadanie_roboty",
+        title: "Czym jest React",
+        subtitle: "Jest to biblioteka JavaScriptoą stworzoną przez Facebooka. Pomagająca w budowie interfejsów. React ma dwa główne założenia:",
         list: [
-            "w pliku roboty.js znajdziesz listę 100 najbardziej groźnych robotów świata",
-            "przeanalizuj plik plik roboty.js i zobacz jakie informacje możesz wyświetlic na stronie o każdym z nich",
-            "wyświetl każdego robota kolejno, zdjęcie po lewej, obok kolejno nazwa, model, i producenta ",
-            "posortuj wszystkie roboty(male) na niebieskim polu a wszystkie robotki(female) na różowym",
+            'jednokierunkowy przepływ danych',
+            'aplikacja budowana w oparciu na komponenty',
         ],
+        background: "react/reactjs.png",
+        layout: "photo-left"
+    },
+    {
+        title: "Dlaczego używamy React",
+        list: [
+            "Deklaratywny kod. - Piszemy komponenty, ktróre możemy używać wielokrotnie w naszej aplikacji nadawając im różne wartości.",
+            "Virtual DOM. - Deklaratywny kod jest szybki, ponieważ aktualizacje drzewa DOM wspomaga Virtual DOM.",
+            "Pooularny I ma dużo gotowych paczek – bardzo łatwo możemy zaimportować dodatkową gotową funkcjonalność. Jeśli chcemy dodać karuzele ze zdjęciami lub wizualizować dane, zawsze bez problemu znajdziemy odpowiednie paczki do nich.",
+            'Bezpieczny – React implementuje wiele zabezpieczeń pozwalających na pisanie bezpieczniejszego kodu. '
+        ],
+        background: "react/reactjs.png",
+        layout: "photo-right"
+    },
+    {
+        title: "Instalujemy reacta z create-react-app",
+        list: [
+            'npm install -g create-react-app',
+            'create-react-app nazwa-aplikacji',
+            'cd nazwa-aplikacji',
+            'npm start / yarn start',
+        ],
+        link: {
+            text: "create-react-app",
+            url: "https://github.com/facebook/create-react-app"
+        },
+        background: "react/create-react-app.svg",
+        layout: "photo-left"
+    },
+    {
+        title: "React jak i inne frameworki ma swój zalecany układ plików. ",
+        list: [
+            'Do tej pory działaliśmy w plikach w HTML: index.html',
+            'Tam łączyliśmy nasz html, który zawierał treść naszej strony z CSS-em: style.css',
+            'Również w naszym pliku HTML robiliśmy link do naszych skryptów JavaScriptowych: script.js',
+        ],
+        background: "react/file-structure.png",
+        layout: "photo-right"
+    },
+    {
+        title: "Zadanie",
+        subtitle: "Wgraj i odpal aplikację react przy użyciu create-react-app",
+        list: ["Jeśli masz już wgrane to usuń i wgraj od nowa :p"],
         background: "question-1.jpg",
-        layout: "photo-right"
-    },
-
-    {
-        title: "RESTful API",
-        subtitle: "Umiemy już wyświetlić dane na stronie. Czas na współpracę z serwerem",
-        text: "Strona internetowa może korzysta z zapytań do serwera aby otrzymac, dodac, zmienic i usunąc informacje na serwerze. API (Application Programming Interface), czyli interfejs programistyczny aplikacji, który umożliwia komunikacje między serwerem a przeglądarką.",
-        link: {
-            text: "REST",
-            url: "http://lmgtfy.com/?q=REST"
-        },
-        background: "js/math.jpg",
         layout: "photo-left"
     },
     {
-        title: "AJAX",
-        subtitle: "Ajax czyli Asynchronous JavaScript and XML to technologia, która umożliwia nam ściąganie i wysyłanie części danych bez porzeby przeładowania całej strony.",
-        text: "Przeglądarka wysyła zapytanie zawierające odpowiednie typy zapytań (GET, POST, PUT, DELETE). Serwer odbiera zapytanie, przetwarza i wysyła odpowiedź. Serwer odpowiada statusem",
+        title: "Komponenty w React.js",
+        'subtitle': "Komponenty to pewnego rodzaju klocki, które pozwalają na rozbicie aplikacji na mniejsze elementy. Tworzenie aplikacji w React.js polega tak naprawdę na budowaniu i komponowaniu kolejnych komponentów. ",
+        text: 'Zaletay użycia komponentów:',
         list: [
-            '200	Wszystko ok, połączenie zakończyło się sukcesem',
-            '300	Strona przekierowana na inny adres',
-            '404	Nie ma takiej strony',
-            '500	Błąd serwera',
+            'łatwiej budować z małych kawałków',
+            'łatwiej testować',
+            'możemu wielokrotnie używać komonentów podając im różne dane',
         ],
-        background: "js/404.jpg",
+        background: "react/kf-weather-layout.png",
         layout: "photo-right"
     },
     {
-        title: "AJAX cd",
-        text: "W zależności od tego co chcemy zrobic z danymi wysyłamy zapytanie z odpowiednim typem",
-        list: [
-            'GET - POBIERZ. Ten typ połączenia służy do pobieranie danych. Zazwyczaj dostajemy w odpowiedzi jakiś obiekt z danymi',
-            'POST	- WYŚLIJ. Pozwala na wysłanie informacji na serwer. Efektem może byc sama zwrotka ze statustem(200) lub obiekt z danymi. ',
-            'PUT - UAKTUALNIJ. Zmiana czegoś w bazie danych',
-            'PATCH - Jak PUT ale do uaktualnienia konkretnej właściwości obiektu(wiek).',
-            'DELETE -	USUŃ. Służy do usuwania danych na serwerze',
-        ],
-        background: "js/post.jpg",
-        layout: "photo-right"
-    },
-    {
-        title: "Postman",
-        subtitle: "Pozwala na testowanie zapytań do API ",
-        link: {
-            text: "getpostman.com",
-            url: "https://www.getpostman.com/"
-        },
-
-        background: "js/postman.jpg",
-        layout: "photo-left"
-    },
-    {
-        title: "Zapytanie ajax z Fetch",
-        subtitle: "Jest wiele sposobów na wysyłanie zapytań AJAX. Jedną z opcji jest fetch. ",
-        text: '',
+        title: "JSX – taki niby HTML I JS w jednym",
+        'text': "JSX składnią przy której pomocy piszemy w React. Podobny do html, ale nadal mamy do czynienia z JS. Wszystko dzięki odpowiednio skonfigurowanemu transpilatorowi Babel, który tłumaczy naszego JSXa na coś co react rozumie lepiej. Różni się to od Vue i Angulara, nie umieszczamy JS w HTML, na odwrót – HTML w JS.",
         code: [
-            "fetch('https://example.com/profile')",
-            ".then(res => res.json())",
-            ".then(response => console.log('Success:', JSON.stringify(response)))",
-            ".catch(error => console.error('Error:', error));",
+            'const user = "Maciek";',
+            '',
+            'const element = (',
+            '  <div>',
+            '    <h1>Hello {user} !</h1>',
+            '    <h2 className=”hello”>Good to see you here.</h2>',
+            '  </div>',
+            ');',
         ],
-        background: "js/fetch.jpg",
-        layout: "photo-right"
-    },
-    {
-        title: "Konsola - Network",
-        subtitle: "Możemy sprawdzić wszystkie zapytania z danej strony w zakładce Network w Konsoli. F12",
-        background: "js/network.jpg",
+        background: "react/kf-weather-layout.png",
         layout: "photo-left"
     },
     {
-        title: "Zadanie",
-        subtitle: "Wejdź na stronę swapi.co. I ściągnij dane na wszystkich bohaterow Gwiedznych Wojen",
+        title: "Jak stworzyć komponent?",
+        'text': "Zazwyczaj musimy pamiętać o 3 podstawowych elementach w komponencie.",
         list: [
-            "wyświetl wszystkie resultaty na stronie w dowolnej formie",
-            "wyświetl tylko postacie o wzroście powyżej 170cm"
+            'import potrzebnych wtyczek (prawie zawsze importujemy React)',
+            'właściwa treśc komponentu JSX',
+            'export komponentu',
         ],
-        background: "question-1.jpg",
+        commentedcode: [{
+                comment: "import wtyczek",
+                code: ['import React from "react"; ']
+            },
+            {
+                comment: "jsx",
+                code: ['Welcome(props) => <h1>Hello, {props.name}</h1>;']
+            },
+            {
+                comment: "export",
+                code: ['export default Welcome;']
+            },
+        ],
+        background: "react/reactjs.png",
         layout: "photo-right"
     },
     {
-        title: "Funkcje wyżeszego rzędu - map",
-        subtitle: "Pozwala na przeiterowanie wszystkich elementow tablicy i wyswietlenie danych. Podobnie jak for() tylko mniej pracy.",
-        commentedcode: [{
-                comment: "Tablica",
-                code: [
-                    "const imiona = ['Maciek', 'Kamil', 'Filip', 'Konrad', 'Kuba']",
-                ]
-            },
-            {
-                comment: "użycie map na tablicy",
-                code: [
-                    'const text = imiona.map(imie => {"<p>" + imie+ " jest cool</p>"})'
-                ]
-            }
+        title: "Użycie komponentu",
+        text: "Aby użyć komponentu wystarczy zaimportować go do pluku w którym będzie użyty. Następnie umieszczamy go w dokumencie pomiędzy nawiasami strzałkowymi <>. Jeśli ma jakieś wartości(propsy) wypisujemy je po nazwie.",
+        code: [
+            'import React from "react"; ',
+            'import Welcome from "./Welcome";',
+            'class App extends React.Component {',
+            '    render(){',
+            '        return (',
+            '            <div>',
+            '            <Welcome name=”Maciek” />',
+            '            <Welcome name=”Filip” />',
+            '        </div>',
+            '    )',
+            '}}',
         ],
-        background: "js/map.jpg",
-        layout: "photo-left"
-    },
-    {
-        title: "Funkcje wyżeszego rzędu - filter",
-        subtitle: "Tworzy nową tablicę z elementów odpowiadających warunkowi",
-        commentedcode: [{
-                comment: "Tablica",
-                code: [
-                    "const imiona = ['Maciek', 'Kamil', 'Filip', 'Konrad', 'Kuba']",
-                ]
-            },
-            {
-                comment: "filtrujemy wszystkie imiona zaczynające się na K",
-                code: [
-                    'const names = imiona.filter(imie => imie[0] === "K")'
-                ]
-            },
-            {
-                comment: "Chaining - łaczenie kilku funkcji wyższego rzędu w ciąg funkcji",
-                code: [
-                    'const namesDisplay = imiona.filter(imie => imie[0] !== "K")',
-                    '.map(i => "<p>"+i+"</p>")'
-                ]
-            }
-        ],
-        background: "js/filter.jpg",
-        layout: "photo-right"
+        layout: "photo-full"
     },
     {
         title: "Zadanie",
-        subtitle: "Przerób kod z poprzedniego zadania aby używały map i filter",
+        subtitle: "Stwórz nowy komponent Footer I inny FooterLink. Umieść Footer komponent w app.js. W komponencie Footer a każdy przycisk powinien być komponentem(FooterLink) z wartością(props) nazwy linkuów inną wartością icon.",
+        background: "question-1.jpg",
+        layout: "photo-left"
+    },
+    {
+        title: "Akcje",
+        subtitle: "Użytkownik komunikuje się z aplikacją w przeglądarce przy użyciu zdarzeń. Pozwalają one wywołać odpowiednie JS-owe funkcje. W czystym JS-ie zdarzenia bardzo podobnie jak w JSX. ",
+        commentedcode: [{
+                comment: "// JavaScript",
+                code: ['<button onclick={onClickHandler()}>Kliknij!</button>']
+            },
+            {
+                comment: "jsx",
+                code: ['<button onClick={onClickHandler}>Kliknij!</button>']
+            },
+        ],
+        background: "react/call-to-action.jpg",
+        layout: "photo-right"
+    },
+    {
+        title: "Akcje cd",
+        subtitle: "Akcją wywołujemy najzwyklejszą JS-ową funkcję. ",
+        code: [
+            "function onClickHandler() {",
+            "    alert('Kliknięto!');",
+            "}",
+        ],
+        background: "react/call-to-action.jpg",
+        layout: "photo-left"
+    },
+    {
+        title: "Zadanie",
+        subtitle: "Dodaj do swojej aplikacji akcje onClick na przyciskach FooterLinks. Akcja przy kliknięciu niech wypisze alert() z nazwą przkazaną do przycisku.",
+        layout: "photo-left",
+        background: "question-1.jpg",
+    },
+    {
+        title: "Komponenty funkcyjne",
+        subtitle: "SFC, albo Stateless Functional Component  - Komponenty bezstanowe. ",
+        code: [
+            "function Welcome(name) {",
+            "    return <h1>Hello, {name}</h1>;",
+            "}",
+        ],
+        background: "react/reactjs.png",
+        layout: "photo-left"
+    },
+    {
+        title: "Komponenty klasowe",
+        subtitle: "Korzystamy z klas znanych z ES2015. Klasa ta koniecznie musi dziedziczyć po React.Component I mieć metodę render() {} ",
+        code: [
+            'class Welcome extends React.Component {',
+            '    render () {',
+            '        return <h1>Hello, {this.props.name}</h1>;',
+            '    }',
+            '}',
+        ],
+        background: "react/reactjs.png",
+        layout: "photo-left"
+    },
+    {
+        title: "Po co nam komponenty klasowe?",
+        subtitle: "Głównym powodem do użycia komponentów klasowych jest stan.Często też usłyszymy nazwy Stateful(klasowe) Components i Stateless Components(funkcyjne) ",
+        list: [
+            'możliwość definiowania stanu komponentu (state), więcej o stanie później',
+            'dostęp do metod cyklu życia komponentu (lifecycle methods), dzięki którym będziemy mogli reagować na różne wydarzenia',
+            'możliwość definiowania fragmentów komponentów (każda funkcja może zwracać JSX!) jako metod w klasie — poprawa czytelności kodu',
+            'możliwość tworzenia metod pomocniczych, z których można korzystać wewnątrz funkcji render. Na przykład do walidacji danych (przykład poniżej)',
+        ],
+        background: "react/reactjs.png",
+        layout: "photo-left"
+    },
+    {
+        title: "Zadanie",
+        subtitle: "Przepisz wszystkie swoje komponenty na klasowe.",
+        layout: "photo-left",
+        background: "question-1.jpg",
+    },
+    {
+        title: "Stan",
+        subtitle: "Stan jest obiektem, który trzyma jakieś dane w komponencie. Gdu zmienimy stan to wtedy komponent się odświerza(mount). Stan możemy ustalić tylko w komponentach klasowych. ",
+        code: [
+            'class Welcome extends React.Component {',
+            '    state = {',
+            '        name: “Maciek”,',
+            '        age: “24”',
+            '    }',
+            '    render () {',
+            '        return (',
+            '            <div>',
+            '            <h1>Hello, {this.state.name}</h1>;',
+            '            <p>Udajesz, że masz {this.state.age} lata a tak na prawdę masz więcej</p>',
+            '            </div>	 ',
+            '        )',
+            '    }',
+            '}',
+        ],
+        background: "react/reactjs.png",
+        layout: "photo-right"
+    },
+    {
+        title: "Zmiana stanu",
+        subtitle: "Stanu nie możemy bezpośrednio nadpisać jak normalnych obiektów w JS this.state.age = 32. Używamy do tego metody setState.",
+        code: [
+            'starzejeSie = () => {',
+            '    this.setState({ age: 32 })',
+            '} ',
+        ],
+        background: "react/reactjs.png",
+        layout: "photo-left"
+    },
+    {
+        title: "Cylk życia komponentu (lifecycle)",
+        text: "Każdy komponent ma pewien określony cykl życia. Na odpowiednich etapach wywoływane są też jego metody cyklu życia. Pozwala nam to na sprecyzowanie kiedy odpali jakaś konkretna metoda. Dzielą się one na 4 grupy:",
+        list: [
+            'Montowanie(mount) – Komponent jest tworzony I dodawany do drzewa DOM.constructor(props), componentWillMount(), componentDidMount, render()',
+            'Aktualizacja(update) – Update może zostać wywołany gdy zmieniają się props lub state. componentWillReceiveProps(nextProps), shouldComponentUpdate(nextProps, nextState), componentDidUpdate(prevProps, prevState)',
+            'Odmontowanie - Wywoływane gdy komponent jest usuwany z DOM - componentWillUnmount() ',
+            'Łapanie błędów - componentDidCatch(error, info)',
+        ],
+        background: "react/cycle.png",
+        layout: "photo-left"
+    },
+    {
+        title: "Zadanie",
+        subtitle: "Użyj listy robotów I robotek z zadania z poprzednich zajęć. Posortuj w React.js roboty na lewą część strony a robotki na prawą. Stwórz komponent który będzie wyświetlał zdjęcie robota/robotki po lewej stronie a obok niego nazwe i model. Komponent będzie przyjmował propsy (photo, name, model, sex). W zależności od tego czy sex jest male lub female zmień kolor tła komponentu.",
+        layout: "photo-left",
 
         background: "question-1.jpg",
-        layout: "photo-left"
     },
     {
-        title: "Zadanie",
-        subtitle: "Dodaj do swojej strony formę pozwalającą wyszukać bohatera",
-        list: [
-            "gdy użytkownik wpisze numer nasza strona wyświetli odpowiedniego bohatera z tym numerem",
-            "dodaj pole tekstowe gdzie użytkownik może szukać bohatera po imieniu, po wciśnięciu przycisku szukaj wyświetl rezultat",
+        title: "Komunikacja z API",
+        subtitle: "W react.js najeczęściej używamy jednej z 2 metod do komunikacji z zewnętrznym api. Możemy użyć znanego nam już fetch-a lub skorzystać z dodatku takiego jak axios. Jeśli chcemy żeby dane zostały ściągnęte w momencie ładowania komponentu możemy użyć metody componentDidMount(). ",
+        code: [
+            'componentDidMount() {',
+            '    fetch("https://randomuser.me/api/?format=json&results=10")',
+            '      .then(res => res.json())',
+            '      .then(json => this.setState({ contacts: json.results }));',
+            '}',
         ],
-        background: "question-1.jpg",
-        layout: "photo-right"
-    },
-    {
-        title: "Zadanie wspólne",
-        subtitle: "Zakodujemy aplikacje pogodową",
-        list: ["Aplikacja powinna zawierać wyszukiwarkę miasta", "W ciekawy sposob wyświetlić dane temperatury i inne przydatne informacje", "gdy użytkownik wyszuka nowego miasta, aplikacja bez przeładowania pokaże nowe dane"],
-        layout: "photo-full"
-    },
-    {
-        title: "Zadanie",
-        subtitle: "Na zabicie czasu",
-        list: ["Animacja miała wpisane ręcznie wszystkie parametry animacji", "Użyj funkcji JavaScriptowej Math.rand do generowania przypadkowych czasow odpalenia rakiety i animacji startu"],
-        background: "question-1.jpg",
+        background: "react/reactjs.png",
         layout: "photo-left"
     },
     {
-        title: "Homework",
-        subtitle: "Zbuduj stronę, ktróa pokaże dowolnego Api",
-        list: ["Znajdź swoje animowane rakiety", "W ciekawy sposob wyświetlić wyszukne dane", "Aplikacja powinna wyglądać ładnie dla oka"],
-        link: {
-            text: "API Lista ",
-            url: "https://medium.com/@vicbergquist/18-fun-apis-for-your-next-project-8008841c7be9"
-        },
-        layout: "photo-full"
+        title: "Zadanie",
+        subtitle: "Do końca dzisiejszego spotkania i w domu w React.js aplikację pogodową. Użyj https://openweathermap.org/api jako api, z którego dostaniesz informacje o pogodzie.  Dowiedz się jak działa biblioteka CSS Modules lub React Styled Components i przystyluj swoją aplikację zgodnie z designem.",
+        layout: "photo-left",
+        background: "react/kf-weather-layout.png",
     },
 
 ];
